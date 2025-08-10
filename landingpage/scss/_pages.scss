@@ -1,0 +1,236 @@
+// 2nd April 2022 - Updation by Twinkle
+.body-font-base {
+  font-size: 14px;
+}
+
+.docs {
+  a {
+    text-decoration: none !important;
+  }
+
+  .alert-light-danger {
+    h6 {
+      color: $red;
+    }
+  }
+
+  .bootstrap-duallistbox-container {
+    .btn-group {
+      .btn:hover {
+        color: $primary-dark !important;
+      }
+    }
+  }
+
+
+  &#main-wrapper[data-layout=vertical] {
+    .left-sidebar[data-sidebarbg=skin6] {
+      .sidebar-nav ul {
+        padding: 0 20px;
+
+        .nav-small-cap {
+          color: $dark;
+          padding: 12px 30px;
+          justify-content: start;
+        }
+
+        .sidebar-item {
+          width: auto;
+
+          .sidebar-link {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            &.active:not(.has-arrow) {
+              background-color: $sidebar-active; //coming from landing page's variable file
+              color: white !important;
+              border-radius: 6px;
+            }
+
+            &.active {
+              &.has-arrow {
+                color: $sidebar-active;
+              }
+            }
+          }
+
+          .first-level {
+            .sidebar-item {
+              .sidebar-link {
+                padding: 10px 15px;
+              }
+
+            }
+          }
+        }
+
+        .first-level {
+
+          .sidebar-item {
+            padding-left: 0;
+          }
+
+          .sidebar-link {
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+        }
+      }
+
+      .hide-menu {
+        display: block;
+      }
+    }
+  }
+
+  .left-sidebar {
+    width: 250px;
+    margin-left: -250px;
+    box-shadow: none;
+    border-right: 1px solid $gray-200;
+
+    &.show-sidebar {
+      margin-left: 0;
+    }
+  }
+
+  &#main-wrapper[data-layout=vertical][data-sidebartype=mini-sidebar] {
+    .page-wrapper {
+      margin-left: 0;
+      background: $white;
+    }
+
+    .topbar {
+      .top-navbar {
+        .navbar-header {
+          .logo-text {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .page-wrapper {
+    background: $white;
+
+    &>.container-fluid {
+
+      min-height: calc(100vh - 120px);
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    pre {
+      margin: 0;
+
+      code.hljs {
+        border-radius: 10px;
+        padding: 0 15px;
+        font-size: 15px;
+      }
+    }
+
+    .card {
+      border: 1px solid $card-border-color;
+      border-radius: 20px;
+
+      .card-body {
+        padding: 30px;
+
+        &.card-bg {
+          background: rgba(248, 249, 250, 1);
+        }
+      }
+    }
+  }
+
+  .topbar {
+    box-shadow: none;
+  }
+
+  .footer {
+    font-size: 15px;
+    background: #fff;
+    border-top: 1px solid $gray-200;
+    padding: 17px 15px
+  }
+}
+
+@media(min-width:360px) {
+  .docs {
+    .left-sidebar {
+      margin-left: -250px;
+
+      &.show-sidebar {
+        margin-left: 0;
+        transition: all 1s;
+      }
+    }
+
+    &#main-wrapper[data-layout=vertical][data-sidebartype=mini-sidebar] {
+      .left-sidebar {
+        width: 250px;
+      }
+
+      .topbar {
+        .top-navbar {
+          .navbar-header {
+            border-bottom: 1px solid $gray-200;
+            display: flex;
+            width: 100%;
+
+            .navbar-brand {
+              margin-left: 0;
+            }
+
+            .nav-toggler {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@include media-breakpoint-down(md) {
+  #main-wrapper[data-sidebartype=mini-sidebar] {
+    .left-sidebar {
+      left: 0 !important;
+    }
+  }
+}
+
+@media(min-width:1170px) {
+  .docs {
+    &#main-wrapper[data-layout=vertical][data-sidebartype=full] {
+      .page-wrapper {
+        margin-left: 250px;
+      }
+    }
+
+    .left-sidebar {
+      margin-left: 0;
+    }
+
+    .topbar {
+      .top-navbar {
+        .navbar-header {
+          border-bottom: none;
+
+          .navbar-brand {
+            margin-left: 10px;
+            border-right: 1px solid $gray-200;
+          }
+        }
+      }
+
+      .nav-toggler {
+        display: none;
+      }
+    }
+  }
+}
