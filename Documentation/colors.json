@@ -1,0 +1,26 @@
+{
+  "font": {
+    "family": "'Poppins', sans-serif",
+    "weights": {
+      "regular": "400",
+      "medium": "500",
+      "bold": "700"
+    }
+  },
+  "radius": {
+    "base": "0.25rem"
+  },
+  "spacing": {
+    "base": "1rem"
+  },
+  "colors": {
+    "primary": "#0d6efd",
+    "secondary": "#6c757d",
+    "success": "#198754",
+    "info": "#0dcaf0",
+    "warning": "#ffc107",
+    "danger": "#dc3545",
+    "light": "#f8f9fa",
+    "dark": "#212529"
+  }
+}
